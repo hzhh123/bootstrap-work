@@ -1,0 +1,83 @@
+html, body{height:100%}
+body {
+	overflow-x: hidden;
+}
+.navbar{
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+.sidebar{
+	min-width: 250px; 
+	width:250px;
+	border-right: 1px solid #e7e7e7;
+	border-left: 1px solid #e7e7e7;
+	min-height: 900px;
+	float: left;
+	position: relative;
+	border:1px solid green;
+}
+.sidebar .toggle .fa{
+	cursor: pointer;
+}
+
+.footer{
+	 background-color: #f8f8f8;
+	border:1px solid  #e7e7e7;
+	padding: 0px;
+	margin: 0px;
+}
+.sidebar-header{
+	border-bottom:1px solid #e7e7e7;
+	padding:10px;
+}
+ .main{
+	width:100%;
+	height:auto;
+} 
+#content{
+	
+	margin-left: 260px;
+	margin-right: 0;
+	position: relative;
+	min-height:900px;
+	width: auto;
+	border: 1px solid red
+}
+@media(min-width: 768px){
+
+.sidebar #divider {
+    background: #ececec;
+    min-height: 100%;
+    position: absolute;
+    margin-left: 250px;
+    top:0px;
+    left: 0px;
+    width: 8px;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+}
+	.sidebar .resizeable {
+    cursor: col-resize;
+    background: url(../img/sidebar-divider-dots.png) 2px 50% no-repeat #ececec!important;
+}
+	
+}
+
+
+.sidebar.min-sidebar .sidebar-header >i{
+	position: relative;
+	float: right;
+	right:20px;
+}
+
+.top{
+	position: fixed;
+	right:10px;
+	bottom: 30px;
+	z-index: 999;
+}
+#top{
+	border: 1px solid #ccc;
+	padding: 8px 5px 0px 5px;
+	border-radius: 4px;
+}

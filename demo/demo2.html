@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script type="text/javascript" src="../dist/plugin/jquery/jquery.min.js"></script>
+    <style type="text/css">
+    	html {
+			  font-family: sans-serif;
+			  -webkit-text-size-adjust: 100%;
+			      -ms-text-size-adjust: 100%;
+			}
+    	.content{
+    		  padding-right: 15px;
+			  padding-left: 15px;
+			  margin-right: auto;
+			  margin-left: auto;
+			   width: 970px;
+    	}
+    	a{
+    		text-decoration: none;
+    		color:#333;
+    	}
+    	a:hover{
+    		color: red;
+    	}
+    	#city{
+			border:1px solid #ccc;
+			position: absolute;
+			padding: 2px 0px 2px 5px;
+			margin-top: 2px;
+			width:970px;
+			height:auto;
+		/*	display: none;*/
+    	}
+    	#city li{
+    		list-style: none;
+    		position: relative;
+    		float: left;
+    		padding: 10px 10px 5px 10px;
+    	}
+    	#menu{
+    		 background-color: #222;
+ 			 border-color: #080808;
+    		height:45px;
+    		margin-bottom:10px;
+    		
+    	}
+    	html,body{
+    		margin:0px;
+    		padding: 0px;
+    	}
+    	#menu a{
+    		color: #fff;
+    		padding: 20px 20px 20px 20px;
+    		position: relative;
+    		top:10px;
+    	}
+    </style>
+</head>
+<body>
+<div id="menu">
+	<a href="demo2.html">昆明市维修资金系统</a>
+</div>
+<div class="content">
+	<a href="javascript:void(0)" id="collapse">昆明市</a>
+	  	<ul id="city">
+	  		<li><a href="#">五华区</a></li>
+	  		<li><a href="#">呈贡区</a></li>
+	  		<li><a href="#">盘龙区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  		<li><a href="#">西山区</a></li>
+	  	</ul>
+</div>  	
+<script type="text/javascript">
+	$(function(){
+		$('#collapse').on('click',function(){
+			//$('#city').css('display','block');
+			$('#city').toggle();
+		})
+	})
+</script>	  	
+</body>
+</html>

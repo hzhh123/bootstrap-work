@@ -1,0 +1,47 @@
+   #sidebar .panel-footer {
+       position: fixed;
+       bottom: 0;
+       width: 249px;
+       height: auto;
+       overflow: auto;
+       border: 1px solid #337ab7;
+       border-top: 0;
+       padding: 15px 15px;
+   }
+   
+   #sidebar {
+       width: 250px;
+       height: 700px;
+       position: fixed;
+   }
+   
+   #sidebar .panel {
+       border-radius: 0;
+   }
+   
+   #content {
+       margin-left: 250px;
+       width: auto;
+       overflow: auto;
+   }
+   
+   #footer {
+       position: fixed;
+       bottom: 0;
+       background-color: #ccc;
+       padding: 5px 15px;
+       width: 100%;
+   }
+   
+   #footer div {
+       text-align: center;
+   }
+   
+   .btn-group .dropup {
+       float: left;
+   }
+   
+   .btn-group .dropup button {
+       border-radius: 0;
+       width: 40px;
+   }

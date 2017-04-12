@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="../dist/plugin/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../dist/plugin/font-awesome/css/font-awesome.css"/>
+    <script type="text/javascript" src="../dist/plugin/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/plugin/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-treeview.js"></script>
+</head>
+<body>
+<div class="container">
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">昆明市维修资金</a>
+			</div>
+	</div>
+	</nav>
+	<div class="row">
+		<!-- <ul class="list-group" id="city">
+		</ul> -->
+		<div class="col-sm-3">
+          <div id="treeview4" class=""></div>
+        </div>
+        <div class="col-md-9">
+        	<div id="carousel-id" class="carousel slide" data-ride="carousel">
+        		<ol class="carousel-indicators">
+        			<li data-target="#carousel-id" data-slide-to="0" class=""></li>
+        			<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+        			<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+        		</ol>
+        			<div class="carousel-inner">
+        				<div class="item">
+        					<img src="img/11.png">
+        					<div class="container">
+        						<div class="carousel-caption">
+        							<h1>五华区</h1>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="item">
+        					<img src="img/21.png">
+        					<div class="container">
+        						<div class="carousel-caption">
+        							<h1>呈贡区</h1>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="item active">
+        					<img src="img/31.png">
+        						<div class="carousel-caption">
+        							<h1>盘龙区</h1>
+        						</div>
+        					</div>
+        				</div>
+        		<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        		<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        	</div>
+        	<blockquote class="blockquote-reverse">
+ 				 <footer>图片大小为846x469px</footer>
+			</blockquote>
+        	
+        </div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		/*$('#collapse').on('click',function(){
+			//$('#city').css('display','block');
+			$('#city').toggle();
+		})*/
+
+		// var data=[
+		// 			{href:'#',text:'五华区'},
+		// 			{href:'#',text:'呈贡区'},
+		// 			{href:'#',text:'西山区'},
+		// 			{href:'#',text:'盘龙区'},
+		// 			{href:'#',text:'官渡区'},
+		// 		];
+		// for(var i=0;i<data.length;i++){
+		// 	$('#city').append("<li class='list-group-item'><a href='"+data[i].href+"''>"+data[i].text+"</a></li>");
+		// }
+		 var defaultData = [
+          {
+            text: '昆明市',
+            href: 'javascript:void(0)',
+            tags: ['5'],
+            nodes: [
+              {
+                text: '五华区',
+                href: '#',
+                tags: ['0'],
+               },
+                  {
+                    text: '呈贡区',
+                    href: 'https://www.baidu.com/',
+                    tags: ['0']
+                  },
+                  {
+                    text: '西山区',
+                    href: '#grandchild2',
+                    tags: ['0']
+                  },
+                  {
+                    text: '盘龙区',
+                    href: '#grandchild2',
+                    tags: ['0']
+                  },
+                  {
+                    text: '官渡区',
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+            ]
+          }
+        ];
+
+
+		 $('#treeview4').treeview({
+		 	enableLinks:true,
+          color: "#428bca",
+          data: defaultData
+        });;
+	})
+</script>	
+</body>
+</html>
