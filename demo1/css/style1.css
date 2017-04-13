@@ -1,19 +1,43 @@
-﻿html,body{
-	overflow: hidden;
-}
-#sidebar{
-	width: 250px;
-	position: fixed;
-}
+  html,body{
+    /*background-color: #337ab7;*/
+    overflow: hidden;
+  }
+  #main{
+    margin-top: 50px;
+    /*border:1px solid blue;*/
+  }
+   #sidebar {
+       width: 250px;
+       position: relative;
+       /*border: 1px solid red;*/
+       float: left;
+   }
+   
+   #sidebar .panel {
+       border-radius: 0;
+       /*height: 100%;*/
 
-#sidebar>.panel{
-	border-radius: 0;
-	margin:0;
-}
-#sidebar>.panel>.panel-body{
-	overflow: auto;
-	padding: 0;
-}
+   }
+   #sidebar .panel-body{
+    overflow: auto;
+    width:250px;
+    padding-top: 0px;
+   }
+      #sidebar .panel-footer {
+        position: absolute;
+        bottom: 0px;
+        width: 250px;
+        border:1px solid  #337ab7;
+        background-color: #337ab7;
+        left:0;
+        color: #fff;
+        border-radius: 0;
+        padding: 5px 2px;
+
+      }
+
+
+  
 #sidebar>.panel>.panel-body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -21,113 +45,96 @@
 #sidebar>.panel>.panel-body::-webkit-scrollbar-track {
     border: 1px #d3d3d3 solid;
     box-shadow: 0px 0px 3px #dfdfdf inset;
-    border-radius: 10px;
+    border-radius: 0px;
     background: #eee;
 }
 #sidebar>.panel>.panel-body::-webkit-scrollbar-thumb {
     border: 1px #808080 solid;
     border-radius: 10px;
-    background: #999;
+    background: #337ab7;
 }
 #sidebar>.panel>.panel-body::-webkit-scrollbar-thumb:hover {
-    background: #7d7d7d;
+    background: #337ab7;
 }
 #sidebar>.panel>.panel-heading {
    border-radius: 0;
 }
-#content{
-	overflow: hidden;
-	margin-left: 250px;
-	width: 100%;
-	border:1px solid red;
-}
+   #content {
+       overflow: hidden;
+       /*width:auto;*/
+       /*border:1px solid green;*/
+       /*width: 616px;*/
+       float: left;
+       position: relative;
+   }
+   #content .nav-tabs li a{
+    color: #fff;
+    border-color: #2e6da4; 
+   }
+    #content .nav-tabs li a:hover{
+    color: #fff;
+    background-color: #286090;
+     border-color: #2e6da4;
 
-#sidebar .panel-footer{
-	position: fixed;
-	bottom: 0;
-	border-top: 0;
-	border:1px solid #337ab7;
-	border-top:0;
-	width:250px;
-	padding: 3px 3px;
-	left:0;
-	 background-color: #337ab7;
-	 color: #fff;
-	 border-radius: 0;
-}
-#sidebar .toggle,#sidebar #toggle-sidebar{
-	cursor: pointer;
-}
+   }
+   #content .nav-tabs li.active a{
+    color: #fff;
+    background-color: #286090;
+     border-color: #2e6da4;
+     border-bottom: 2px solid red;
 
+   }
+   #content .nav-tabs a, #content .nav-tabs li+li{
+    margin:0;
+   }
+   #content .tab-content{
+   	overflow: auto;
+   }
 .btn-group .dropup{
-	float: left;
+  float: left;
 }
 .btn-group .dropup button{
-	border-radius: 0;
-	width: 40px;
-}
+  border-radius: 0;
+  width: 40px;
+} 
+ @media(max-width: 768px){
+ 	#sidebar{
+ 		position: fixed;
+ 	}
+  #content .nav-tabs{
+    display: none;
+  }
+  .toggle-sidebar{
+    display: block;
+  }
+  #sidebar{
+    display: none;
+  }
+ }
+ @media(min-width: 768px){
 
-/*.navbar-fixed-top+#sidebar{
-	margin-top: 50px;
-}*/
-
-#footer{
-	/*position: fixed;
-	bottom: 0;*/
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: 5px 15px;
-	background-color: #ccc;
+  #content .nav-tabs{
+    display: block;
+  }
+  .toggle-sidebar{
+    display: none;
+  }
+  #sidebar{
+    display: block;
+  }
+ }
+#content .nav-tabs{
+	background-color: #337ab7;
 }
-#footer>div{
-	text-align: center;
-	color: #666;
-}
-
-.navbar-fixed-top+#main{
-	margin-top: 51px;
-}
-#content #tabbable{
-	/*position: fixed;*/
-	width:100%;
-}
-#content #tabbable .tab-content{
-	overflow: auto;
-/*	border-top:1px solid #337ab7;*/
-	
-}
-
-#content #tabbable .tab-content::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-#content #tabbable .tab-content::-webkit-scrollbar-track {
-    border: 1px #d3d3d3 solid;
-    box-shadow: 0px 0px 3px #dfdfdf inset;
-    border-radius: 10px;
-    background: #eee;
-}
-#content #tabbable .tab-content::-webkit-scrollbar-thumb {
-    border: 1px #808080 solid;
-    border-radius: 10px;
-    background: #999;
-}
-#content #tabbable .tab-content::-webkit-scrollbar-thumb:hover {
-    background: #7d7d7d;
-}
-
-@media(max-width: 768px){
-	#content #tabbable .nav-tabs{
-		display: none;
-	}
-	#sidebar #toggle-sidebar{
-		display: none;
-	}
-
-}
-
-/**遮罩*/
-
+ .toggle-sidebar{
+  position: fixed;
+  top:50%;
+  /*left:20px;*/
+  background-color: #337ab7;
+  color: #fff;
+  padding:3px 5px;
+  z-index: 999;
+ }
 
 /*导航样式*/
 /*start navbar*/
@@ -208,4 +215,22 @@
   }
 }
 
-/*end navbar*/
+#content .tabbable .tab-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+}
+#content .tabbable .tab-content::-webkit-scrollbar-track {
+    border: 1px #d3d3d3 solid;
+    box-shadow: 0px 0px 3px #dfdfdf inset;
+    border-radius: 0px;
+    background: #eee;
+}
+#content .tabbable .tab-content::-webkit-scrollbar-thumb {
+    border: 1px #808080 solid;
+    border-radius: 10px;
+    background: #337ab7;
+}
+#content .tabbable .tab-content::-webkit-scrollbar-thumb:hover {
+    background: #337ab7;
+}
